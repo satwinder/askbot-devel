@@ -195,7 +195,9 @@ def questions(request, **kwargs):
             'name': escape(tag.name),
             'used_count': humanize.intcomma(tag.local_used_count)
         } for tag in related_tags]
-
+        
+        
+		return "TEst"
         return HttpResponse(simplejson.dumps(ajax_data), mimetype = 'application/json')
 
     else: # non-AJAX branch
