@@ -817,7 +817,7 @@ def delete_bulk_tag_subscription(request):
 @decorators.get_only
 def api_get_questions(request):
     """json api for retrieving questions by title match"""
-    print query = request.GET.get('query_text', '').strip() sys.exit()
+    query = request.GET.get('query_text', '').strip()
     tag_name = request.GET.get('tag_name', None)
 
     if askbot_settings.GROUPS_ENABLED:
