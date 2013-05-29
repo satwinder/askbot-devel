@@ -45,8 +45,6 @@ from askbot.templatetags import extra_tags
 from askbot.conf import settings as askbot_settings
 from askbot.views import context
 
-import sys
-
 # used in index page
 #todo: - take these out of const or settings
 from askbot.models import Post, Vote
@@ -146,10 +144,6 @@ def questions(request, **kwargs):
     reset_method_count = len(filter(None, [search_state.query, search_state.tags, meta_data.get('author_name', None)]))
 
     if request.is_ajax():
-		
-		print "test"
-		sys.exit()
-		
         q_count = paginator.count
 
         question_counter = ungettext('%(q_num)s question', '%(q_num)s questions', q_count)
