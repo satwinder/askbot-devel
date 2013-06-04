@@ -62,7 +62,9 @@
     $(document).ready(function(){
         // focus input on the search bar endcomment
         var activeTab = askbot['data']['activeTab'];
+        alert("okay");
         if (inArray(activeTab, ['users', 'questions', 'tags', 'badges'])) {
+			alert("okay");
 			var searchInput = $('#keywords'); 
         } else if (activeTab === 'ask') {
 			var searchInput = $('#id_title');
